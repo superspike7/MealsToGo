@@ -4,28 +4,28 @@ import { SafeAreaView, StatusBar } from "react-native";
 import { RestaurantInfoCard } from "./components/restaurant-info-card.component";
 import styled from "styled-components";
 
-const RestaurantContainer = styled(SafeAreaView)`
+const SafeArea = styled(SafeAreaView)`
   flex: 1;
-  margin-top: ${StatusBar.currentHeight};
+  margin-top: ${StatusBar.currentHeight}px;
 `;
 
-const RestaurantSearch = styled.view`
-  padding: 16,
+const SearchContainer = styled.view`
+  padding: 16px,
 `;
 
-const RestaurantList = styled.view`
+const RestaurantListContainer = styled.view`
   flex: 1,
-  padding: 16,
+  padding: 16px,
   background-color: "blue",
 `;
 
 export const RestaurantsScreen = () => (
-  <RestaurantContainer>
-    <RestaurantSearch>
+  <SafeArea>
+    <SearchContainer>
       <Searchbar />
-    </RestaurantSearch>
-    <RestaurantList>
+    </SearchContainer>
+    <RestaurantListContainer>
       <RestaurantInfoCard />
-    </RestaurantList>
-  </RestaurantContainer>
+    </RestaurantListContainer>
+  </SafeArea>
 );
