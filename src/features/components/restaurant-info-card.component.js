@@ -6,6 +6,7 @@ const Title = styled(Text)`
   padding: ${({ theme }) => theme.space[3]};
   color: ${({ theme }) => theme.colors.ui.primary};
   text-align: center;
+  font-family: ${({theme}) => theme.fonts.body}
 `;
 
 const RestaurantCard = styled(Card)`
