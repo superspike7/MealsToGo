@@ -9,14 +9,14 @@ const SafeArea = styled(SafeAreaView)`
   margin-top: ${StatusBar.currentHeight}px;
 `;
 
-const SearchContainer = styled.view`
-  padding: 16px,
+const SearchContainer = styled.View`
+  padding: ${({ theme }) => theme.space[3]};
 `;
 
-const RestaurantListContainer = styled.view`
-  flex: 1,
-  padding: 16px,
-  background-color: "blue",
+const RestaurantListContainer = styled.View`
+  flex: 1;
+  padding: ${({ theme }) => theme.space[3]};
+  backgroundColor: ${({ theme }) => theme.colors.bg.secondary};
 `;
 
 export const RestaurantsScreen = () => (
